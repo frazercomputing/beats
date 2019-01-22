@@ -42,4 +42,11 @@ var Bundle = provider.MustCreate(
 		"receive events from a SQS queue",
 		feature.Experimental,
 	),
+).MustAddFunction("flow_logs",
+	NewFlowLogs,
+	feature.NewDetails(
+		"Flow Logs trigger",
+		"receive events from a vpc flow log.",
+		feature.Experimental,
+	),
 ).Bundle()
